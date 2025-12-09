@@ -1,0 +1,7 @@
+pypdf
+sentence-transformers
+chromadb
+gpt4all
+huggingface_hub
+streamlit
+fpdf
