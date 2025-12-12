@@ -23,7 +23,8 @@ class HRAgent:
 
     def classify_intent(self, query, history=[]):
         # 1. Regex Overrides for Greetings (Robust Chitchat)
-        chat_pattern = r"^(h+i+|h+e+y+a?|h+e+l+o+|good\s*(morning|evening|afternoon)|who\s+are\s+you|what\s+is\s+your\s+name|help|thanks?)"
+        # Match greetings at start, or specific keywords anywhere
+        chat_pattern = r"^(h+i+|h+e+y+a?|h+e+l+o+|good\s*(morning|evening|afternoon)|who\s+are\s+you|what\s+is\s+your\s+name|help)|(\b(thanks?|joke)\b)"
         if re.search(chat_pattern, query.lower()):
             return "chitchat"
         
