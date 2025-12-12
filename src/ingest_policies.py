@@ -45,7 +45,7 @@ def load_documents(data_dir):
                     print(f"Error reading {file}: {e}")
     return documents
 
-def split_text(text, chunk_size=500, overlap=50):
+def split_text(text, chunk_size=1000, overlap=200):
     chunks = []
     start = 0
     while start < len(text):
